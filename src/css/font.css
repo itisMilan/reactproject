@@ -1,0 +1,18 @@
+@font-face {
+    font-family: sans-serif;
+    src: url('./app.css');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: sans-serif;
+    src: url('./app.css');
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: sans-serif;
+    src: url('./app.css');
+    font-weight: normal;
+    font-style: normal;
+}
