@@ -3,7 +3,7 @@ import RecipeIngredientEdit from "./RecipeIngredientEdit";
 import {RecipeContext} from "./App";
 
 export default function RecipeEdit({recipe}) {
-const{ handleRecipeChange }= useContext {RecipeContext}
+const{ handleRecipeChange }= useContext (RecipeContext)
   return (
     <div className="recipe-edit">
       <div className="recipe-edit__remove-button-container">
