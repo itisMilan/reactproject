@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import RecipeSearch from './RecipeSearch';
+import RecipeSearch from './RecipeSearch';
 import RecipeList from "./RecipeList";
 import "../css/app.css";
 import { v4 as uuidv4 } from "uuid";
@@ -64,9 +64,9 @@ function App() {
   return (
     
     <RecipeContext.Provider value={recipeContextValue}>
-      {/* <RecipeSearch
+      <RecipeSearch
       RecipeList={RecipeList}
-      /> */}
+      />
       {" "}
       <RecipeList recipes={recipes} />
       {selectedRecipe && <RecipeEdit recipe={selectedRecipe} />}{" "}

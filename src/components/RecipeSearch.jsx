@@ -1,30 +1,23 @@
-// import React,{useState} from 'react'
-// import RecipeList from './RecipeList';
+import React from 'react'
+import RecipeList from './RecipeList'
+import { useState } from 'react';
 
-// export default function RecipeSearch(RecipeList) {
-//   const searchBar = function(){
-// const [searchInput,setSearchInput]=useState("");
-// const handleChange = (e)=>{
-//   e.preventDefault();
-//   setSearchInput(e.target.value);
-// };
+export default function RecipeSearch() {
+    const [searchTerm,setSearchTerm]= useState('')
+  return (
+  <div>
+      <input type="text" placeholder='search' onChange={event => {setSearchTerm(event.target.value)}}/>
+  {RecipeList.filter((val)=>{
+if (searchTerm === '') {
+    return val}
+    else if (val.reccipe.toLowerCase().includes(searchTerm.toLowerCase())){
+        return val
+    }
+}) 
+.map ((val,key)=>{
+    return <div className='user' key={key}> {val.recipe}</div>
+})}
+</div>
+  );
 
-// if(searchInput.length>0){
-//   RecipeList.filter((recipe)=>{
-// return recipe.name.match(searchInput)
-//   })
-// }
-//   }
-//   return (
-//     <div
-//      className='recipe-search-container'
-//      >
-//         <input type="text"
-//         placeholder='Search Here'
-//         onChange={()=> handleChange}
-//         value={searchInput} 
-//         className='recipe-search__input'/>
-//     <button className='btn--primary btn-search'> Search</button>
-//     </div>
-//   )
-// }
+}
